@@ -1,14 +1,19 @@
 
-thickness=4;
-diameter = 20;
+thickness=6;
+diameter = 15;
 servoGripDiameter = 4.75;
-screwHoleDiameter = 2.5;
+servoGripDepth = 3;
+screwHoleDiameter = 3;
 
 difference() {
 	cylinder(r=diameter/2, h=thickness);
-	translate([0,0,thickness/2])
-		cylinder(r= (servoGripDiameter +.8)/2, h=thickness + 1);
-	translate([0,0,thickness/-1])
-		#cylinder(r=screwHoleDiameter/2, h=thickness * 3);
+
+	// Hole to grip the servo
+	rotate([0,0,180]) // flip over
+		translate([0, 0, thickness-servoGripDepth]) // back off the height of the hole
+			#cylinder(r= (servoGripDiameter +.8)/2, h=servoGripDepth); // drill baby drill
+		
+	// Screw hole
+	#cylinder(r=screwHoleDiameter/2, h=thickness);
 
 }
