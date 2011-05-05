@@ -11,9 +11,10 @@ containerLength = batteryBoxLength + thickness * 2;
 echo(containerLength);
 holeDiameter = 4;
 
-tslotHeight = 12;
-tslotNutWidth = 6;
-tslotNutHeight = 4;
+screwLength = 16;
+tslotHeight = screwLength - thickness;
+tslotNutWidth = 5;
+tslotNutHeight = 3;
 
 translate([-containerWidth/2, -containerLength/2, 0])
 difference() {
