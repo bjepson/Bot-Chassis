@@ -30,11 +30,14 @@ difference() {
     }
 
 	// t-slots
-	for (i = [-thickness/2, containerLength - thickness*1.5]) {
-		translate([containerWidth/2 - holeDiameter/2, i, containerHeight-tslotHeight])
-			#cube([holeDiameter, thickness*2, tslotHeight]);
-		translate([containerWidth/2 - holeDiameter, i, containerHeight-tslotHeight])
-			#cube([holeDiameter*2, thickness*2, tslotNutHeight]);
+
+	for (i = [-thickness/2, containerWidth - thickness*1.5]) {
+		for (j = [holeDiameter, containerLength - holeDiameter *2 - thickness * 2]) {
+			translate([i, j + thickness, containerHeight-tslotHeight])
+				#cube([thickness*2, holeDiameter, tslotHeight]);
+			translate([i, j - holeDiameter/2 + thickness, containerHeight-tslotHeight])
+				#cube([thickness*2, holeDiameter*2, tslotNutHeight]);
+		}
 	}
 
 }
