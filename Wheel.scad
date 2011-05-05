@@ -1,7 +1,7 @@
 
 thickness=6;
-diameter = 15;
-servoGripDiameter = 4.75;
+diameter = 64;
+servoGripDiameter = 4.5;
 servoGripDepth = 3;
 screwHoleDiameter = 3;
 
