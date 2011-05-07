@@ -65,7 +65,7 @@ difference() {
 
 			translate([5, mountHeight/-2 + 12.5, servoWidth/4 + thickness])
 				rotate([0,90,0])
-					for(i = [0, 7]) {
+					for(i = [7]) { // TODO: add 0 here for a second mount hole
 						for (j = [0, centerToCenter * -1 - 2]) { // go front to back
 							translate([0, j, i])
 								rotate([0, 90, 0]) translate([width/2 - 5,0,thickness])
@@ -75,13 +75,15 @@ difference() {
 	}
 
 	// Swiss cheesing
-    for (i = [-10, 0, 10, ]) {
-      for (j = [-35, -25,-15, -5, 5]) {
+    for (i = [0,]) {
+      for (j = [-25,-15, -5]) {
          translate([i, j, thickness/-2])
            #cylinder(r=holeDiameter/2, h=thickness*2);
       } 
     }
 
+	// FIXME - temporary hack to cut down on material used
+	//
 	translate([0, length/2-15, thickness/-2])
 		for (i = [-10, 10]) {
 			for (j = [-10, 10]) {
@@ -89,7 +91,19 @@ difference() {
 	    		       #cylinder(r=holeDiameter/2, h=thickness*2);
 			}
 		}
+	translate([-7.5,30,-thickness/2])
+		#cube([15,15,thickness*2]);
 
+	translate([-15,8,-thickness/2])
+		#cube([30,12,thickness*2]);
+
+	translate([-15,-44,-thickness/2])
+		#cube([30,7.5,thickness*2]);
+
+	translate([10,-30,-thickness/2])
+		#cube([20,centerToCenter - 20,thickness*2]);
+	translate([-30,-30,-thickness/2])
+		#cube([20,centerToCenter - 20,thickness*2]);
 
 
 }
