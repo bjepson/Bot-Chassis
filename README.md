@@ -1,6 +1,8 @@
 Bot Chassis
 ===========
 
+![Bot Body](http://github.com/bjepson/Bot-Chassis/raw/master/BotChassis.png)
+
 This is a 3d-printable bot chassis. You'll still need servos and a front ball wheel.
 
 * BrainCase.scad: This is the cady that holds the batteries and Arduino.
@@ -11,4 +13,3 @@ This is a 3d-printable bot chassis. You'll still need servos and a front ball wh
 * fin.scad: Module to generate fins.
 * servo bracket.scad: A bracket to attach a servo.
 
-![Bot Body](http://github.com/bjepson/Bot-Chassis/raw/master/BotChassis.png)
