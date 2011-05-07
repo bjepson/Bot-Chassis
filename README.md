@@ -5,7 +5,7 @@ Bot Chassis
 
 This is a 3d-printable bot chassis. You'll still need servos and a front ball wheel.
 
-* BrainCase.scad: This is the cady that holds the batteries and Arduino.
+* BrainCase.scad: This is the caddy that holds the batteries and Arduino.
 * Wheel.scad: A servo wheel.
 * body.scad: The base of the chassis.
 * fin left.scad: Another way to grip a battery box and Arduino
