@@ -1,10 +1,10 @@
-containerHeight = 23;
+containerHeight = 20;
 
 padding = 0;
-batteryBoxWidth = 65 + padding;
-batteryBoxLength = 71 + padding;
+batteryBoxWidth = 66.5 + padding;
+batteryBoxLength = 72.5 + padding;
 
-thickness = 3;
+thickness = 2;
 containerWidth = batteryBoxWidth + thickness * 2;
 echo(containerWidth);
 containerLength = batteryBoxLength + thickness * 2;
